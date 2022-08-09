@@ -24,6 +24,7 @@ func main() {
 	//fmt.Println(sumPrimes(50000))
 	count := 100000
 	fmt.Println(sumPrimes2(count)) //100000
+
 }
 
 func factorial(n int) int {
