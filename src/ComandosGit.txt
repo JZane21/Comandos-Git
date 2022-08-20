@@ -25,6 +25,7 @@ Eliminar un directorio lleno
 rmdir nombreDirectorio :
 Eliminar un directorio vacio
 
+
 Comandos Git:
 
 git rm --cached nombre.extension:
