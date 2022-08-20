@@ -1,4 +1,31 @@
-Comandos git:
+Comandos Linux-Basicos:
+pwd :
+mostrar direccion actual
+
+ls :
+mostrar archivos y directorios del
+directorio actual
+
+ls -la :
+mostrar archivos y directorios ocultos
+del directorio actual
+
+mkdir nombreDirectorio :
+Crear un directorio
+
+touch nombreArchivo.extension :
+Crear un archivo con su extension
+
+rm -i nombreArchivo.extension :
+Eliminar un archivo
+
+rm -r nombreDirectorio :
+Eliminar un directorio lleno
+
+rmdir nombreDirectorio :
+Eliminar un directorio vacio
+
+Comandos Git:
 
 git rm --cached nombre.extension:
 Este comando nos ayuda a deshacer los adds
