@@ -1,0 +1,173 @@
+Comandos git:
+
+git rm --cached nombre.extension:
+Este comando nos ayuda a deshacer los adds
+para que no se envien al repositorio con el
+commit, y tambien los elimina del
+repositorio local.
+
+git rm --forced nombre.extension:
+Deshacemos los archivos que se encuentren
+en git y tambien los que estan en nuestro
+disco duro.
+
+git config --list:
+Esto nos muestra las configuraciones que
+por defecto tiene git.
+
+git config --list --show-origin:
+Esto nos muestra las configuraciones que
+por defecto tiene git, junto con su
+ubicacion.
+
+git config --global user.name "usuario"
+git config --global user.email "email"
+
+(En Ubuntu){
+    Si haces un commit sin comentario, debes
+    agregarlo con (luego de haber escrito tu
+    mensaje):
+    ctrl + o
+    enter
+    ctrl + x
+}
+
+
+(En Windows){
+    Si haces un commit sin comentario, debes
+    agregarlo con (luego de haber escrito tu
+    mensaje):
+    esc + shift + z + z
+}
+
+
+git diff codClave1(versionVieja) codClave2
+(versionNueva):
+La forma de comparar los cambios que hubo
+de una version con otra.
+
+git reset codClave --hard:
+Vuelve en el tiempo y deshace todos 
+los cambios hasta llegar
+a la version vieja que se quiere.
+
+git reset codClave --soft:
+Vuelve en el tiempo, pero los archivos y
+cambios agregados con git add no se
+pierden y aun se pueden agregar al
+repositorio con el git commit
+
+git reset head archivo.extension:
+Quitamos el archivo del stagging
+unicamente.
+
+Este mensaje de aqui debes preservarlo a 
+toda costa te lo pido como amigo XD.
+
+git diff:
+Esto compara los cambios que tengas
+comparando el stagging con el disco duro.
+
+git log --stat:
+Veremos los cambios especificos en ciertos
+archivos que cambiamos
+
+git checkout codClave/master archivo.extension:
+ESto nos ayuda a que solo un archivo vuelva
+al pasado, y si queremos que ese sea parte
+de nuestro master, podemos hacerlo.
+
+git log --oneline:
+Te enlista los commits en una forma mas
+simplificada pero menos especifica.
+
+git log --decorate:
+Te muestra en donde se encuentra el
+head point (master) en el log.
+
+git log -p:
+Explica el numero de lineas que se
+cambiaron y te muestra que se cambio en el
+contenido.
+
+git shortlog:
+Indica que commits ha realizado un usuario,
+mostrando el usuario y el titulo de sus
+commits.
+
+git branch nombreRama:
+Creamos una rama en base al commit
+en el que nos encontramos.
+
+git checkout nombreRama:
+Nos podemos mover de rama en rama.
+
+git merge rama:
+Con esto hacemos el merge de una
+rama que tengamos disponible sobre la
+que nos encontramos.
+
+git remote add origin direccionURL:
+Esto nos ayuda a vincular nuestra rama
+master del repositorio local con el
+repositorio en github
+
+git remote -v:
+asi vemos los repositorios disponibles que
+tenemos.
+
+git push origin rama:
+Poner lo que esta en nuestro repositorio
+local en el repositorio web.
+
+git pull origin rama:
+Nos traemos los cambios del repositorio
+que hay en la web a nuestro repositorio
+local. (SI note da este comando, debemos
+forzarlo con esto:
+git pull origin rama --allow-unrelated-histories)
+
+ssh-keygen -t rsa -b 4096 -C "email"
+Crear una llave privada y publica ssh
+
+eval $(ssh-agent -s):
+Revisar si el servidor de llaves ssh
+esta encendido
+
+ssh-add direccionLlavePrivada
+Con esto agregamos nuestra llave privada
+
+git remote set-url origin linkSSH:
+COn esto cambiamos el HTTPS del origin por
+SSH.
+
+git log --all --graph --decorate --oneline:
+De esta manera, se muestra toda la historia de tu 
+proyecto desde que arranco
+
+git tag -a v0.1 -m "mensaje" codEspecial(hash):
+Asi se crea correctamente un tag
+
+git show-ref --tags: (git tag)
+Asi se consultan los tags que tienen
+
+git push origin --tags:
+Asi se envian los tags a nuestro repositorio xd
+
+git push origin :refs/tags/nombreTag:
+Asi se eliminan tags del repositorio en github
+
+git tag -d nombreTag:
+Asi se eliminan los tags de nuestro
+repositorio local
+
+git show-branch: (git show-branch --all)
+Te muestra el historial de las ramas en tu
+repositorio local
+
+git clone url
+Con esto, clonamos un repositorio de la web, y
+lo traemos a nuestro repositorio local
+Pero no podra realizar un git push hasta que
+el administrador del repositorio le de permisos
+de editor
