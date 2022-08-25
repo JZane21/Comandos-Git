@@ -1,32 +1,62 @@
-Comandos Linux-Basicos:
-pwd :
-mostrar direccion actual
+Comandos Basicos Linux:
 
-ls :
-mostrar archivos y directorios del
-directorio actual
+pwd: 
+Mostrar en donde te encuentras
 
-ls -la :
-mostrar archivos y directorios ocultos
-del directorio actual
+ls:
+Mostrar los archivos disponibles
 
-mkdir nombreDirectorio :
-Crear un directorio
+ls -al:
+Mostrar los archivos ocultos (y visibles
+tambien)
 
-touch nombreArchivo.extension :
-Crear un archivo con su extension
+cd direccion:
+Moverse entre carpetas
 
-rm -i nombreArchivo.extension :
-Eliminar un archivo
+mkdir nombreCarpeta:
+Crear una carpeta
 
-rm -r nombreDirectorio :
-Eliminar un directorio lleno
+touch nombreArchivo.extension:
+Crear un archivo con su respectiva
+extension
 
-rmdir nombreDirectorio :
-Eliminar un directorio vacio
+cp nombreArchivo.extension nuevoNombreArchivo.extension:
+Copiar un archivo
+
+cp -r nombreCarpeta nuevaCarpeta:
+Copiar una carpeta
+
+mv nombreArchivo.extension direccion:
+Mover un archivo
+
+mv nombreArchivo.extension nuevoNombre:
+Renombrar archivo
+
+mv nombreCarpeta direccion:
+Mover una carpeta
+
+mv nombreCarpeta nuevoNombre:
+Renombrar carpeta
+
+rm -r nombreCarpeta:
+Borrar carpeta
+
+rmdir nombreCarpeta:
+Borrar carpeta vacia
+
+rm -i nombreArchivo.extension:
+Borrar archivo
+
+alias nombreComando='comandoExistente':
+Declarar un comando temporal
 
 
-Comandos Git:
+
+//////////////////////////////////////////////////////////////////
+
+
+
+Comandos git:
 
 git rm --cached nombre.extension:
 Este comando nos ayuda a deshacer los adds
@@ -123,9 +153,27 @@ Indica que commits ha realizado un usuario,
 mostrando el usuario y el titulo de sus
 commits.
 
+git shortlog -sn:
+Muestra la cantidad de commits que ha
+hecho cada usuario
+
+git shortlog -sn --all:
+Muestra la cantidad de commits que ha
+hecho cada usuario aunque hayan sido
+borrados
+
+git shortlog -sn --all --no-merges:
+Muestra la cantidad de commits que ha
+hecho cada usuario incluyendo los
+eliminados y sin merges
+
 git branch nombreRama:
 Creamos una rama en base al commit
 en el que nos encontramos.
+
+git branch -D nombreRama:
+Eliminamos una rama, y lo que fue
+(en teoria)
 
 git checkout nombreRama:
 Nos podemos mover de rama en rama.
@@ -193,9 +241,90 @@ git show-branch: (git show-branch --all)
 Te muestra el historial de las ramas en tu
 repositorio local
 
-git clone url
+git clone url:
 Con esto, clonamos un repositorio de la web, y
 lo traemos a nuestro repositorio local
 Pero no podra realizar un git push hasta que
 el administrador del repositorio le de permisos
 de editor
+
+git stash:
+guarda cambios sin agregar al repositorio
+temporalmente
+
+git stash list:
+muestra que tenemos guardado, y en que estado
+nos movio de la rama en la que nos encontramos,
+generalmente es head
+
+git stash pop:
+nos traemos los cambios que no agregamos antes
+para ver que hacemos con ellos
+
+git stash branch nombreRama:
+mover los cambios a una nueva rama
+
+git stash drop:
+eliminar los cambios guardados en ese stash
+
+git clean --dry-run:
+muestra que archivos vas a eliminar (es lo 
+contrario a git add, pero esto si eliminara
+de la carpeta real los archivos no deseados)
+
+git clean -f:
+elimina los archivos no deseados, pero no
+puede borrar carpetas aunque estas no sean
+deseadas
+Tampoco puede borrar los archivos que se
+encuentran en la carpeta gitignore
+
+git cherry-pick codClave:
+Esto permite hacer un merge de un commit
+anterior de una rama sobre la que nos
+encontramos
+
+git reflog:
+revela la verdad sobre tus errores pasados
+
+git commit --amend:
+Agregar cambios que querias agregar en un
+commit anterior
+
+git grep -n palabraCLave:
+Se inicia la busqueda de la palabra en los
+archivos del repositorio local (KMP)
+Y muestra en que lugares o fragmentos de
+texto aparece esta palabraCLave
+A nivel de codigo, se debe encerrar el
+comando o codigo entre comillas
+
+git grep -c palabraCLave:
+Muestra cuantas veces usaste la
+palabraCLave en todos tus archivos
+A nivel de codigo, se debe encerrar el
+comando o codigo entre comillas
+
+git log -S "palabraCLave":
+Esto ayuda a buscar una palabraCLave en los
+commits
+
+git config --global alias.nuevoComando "comandoExistente":
+Crea un nuevo comando, tomando el rol de otro
+
+git blame -c archivo.extension:
+Muestra quien hizo ciertos cambios en un
+archivo
+
+git blame archivo.extension -Lnum1,num2 -c:
+Examina solo un rango especifico para ver quienes
+hicieron ciertos cambios en ciertas lineas
+de un archivo (num1<=num2)
+
+git branch -r:
+Vemos las ramas que se encuentran en el
+repositorio remoto
+
+git branch -a:
+Ver ramas tanto locales como las que
+se encuentran en la web
