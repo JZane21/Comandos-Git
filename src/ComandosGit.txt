@@ -317,15 +317,6 @@ commits
 git config --global alias.nuevoComando "comandoExistente":
 Crea un nuevo comando, tomando el rol de otro
 
-git blame -c archivo.extension:
-Muestra quien hizo ciertos cambios en un
-archivo
-
-git blame archivo.extension -Lnum1,num2 -c:
-Examina solo un rango especifico para ver quienes
-hicieron ciertos cambios en ciertas lineas
-de un archivo (num1<=num2)
-
 git branch -r:
 Vemos las ramas que se encuentran en el
 repositorio remoto
