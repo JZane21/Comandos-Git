@@ -47,7 +47,7 @@ fun main() {
 
 fun Sieve(primo: Int): Array<Int>{
     //     Sieve
-	var arreglo = arrayOf<Int>(primo+1)
+    var arreglo = arrayOf<Int>(primo+1)
     var i: Int = 0
     while(i<=primo){
        arreglo[i]=i
@@ -75,6 +75,6 @@ fun Sieve(primo: Int): Array<Int>{
 fun saludar(nuevoNombre: String) = "hola $nuevoNombre"
 
 data class Persona(
-	var Nombre: String,
+    var Nombre: String,
     var Apellido: String
 )
