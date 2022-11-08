@@ -81,6 +81,11 @@ ubicacion.
 git config --global user.name "usuario"
 git config --global user.email "email"
 
+git config --global init.defaultBranch rama:
+Cambia el nombre de la rama por defecto que
+se crea al inicializar un nuevo repositorio
+local
+
 (En Ubuntu){
     Si haces un commit sin comentario, debes
     agregarlo con (luego de haber escrito tu
@@ -293,7 +298,7 @@ commit anterior
 
 git grep -n palabraCLave:
 Se inicia la busqueda de la palabra en los
-archivos del repositorio local (KMP)
+archivos del repositorio local
 Y muestra en que lugares o fragmentos de
 texto aparece esta palabraCLave
 A nivel de codigo, se debe encerrar el
