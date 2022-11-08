@@ -75,6 +75,6 @@ fun Sieve(primo: Int): Array<Int>{
 fun saludar(nuevoNombre: String) = "hola $nuevoNombre"
 
 data class Persona(
-	var Nombre: String,
+    var Nombre: String,
     var Apellido: String
 )
